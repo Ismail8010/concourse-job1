@@ -1,5 +1,0 @@
-build:
-  image: dotnet6
-  env:
-    - key: CHECKMARX
-      value: true

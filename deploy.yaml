@@ -1,6 +1,6 @@
 global:
   team: at
-  name: dynamic-assessment
+  name: dynamic-assessment-test
   type: service
   service:
     port: 80
