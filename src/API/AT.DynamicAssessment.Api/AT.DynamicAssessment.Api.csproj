@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>..\API\AT.DynamicAssessment.Api\AT.DynamicAssessment.Api.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="prometheus-net" Version="6.0.0" />
+    <PackageReference Include="prometheus-net.AspNetCore" Version="6.0.0" />
+    <PackageReference Include="prometheus-net.AspNetCore.HealthChecks" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\AT.DynamicAssessment.Persistence\AT.DynamicAssessment.Persistence.csproj" />
+    <ProjectReference Include="..\..\Core\AT.DynamicAssessment.Application\AT.DynamicAssessment.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\AT.DynamicAssessment.Infrastructure\AT.DynamicAssessment.Infrastructure.csproj" />
+  </ItemGroup>
+<ItemGroup>
+    <InternalsVisibleTo Include="AT.DynamicAssessment.IntegrationTests" />
+  </ItemGroup>
+</Project>

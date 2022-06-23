@@ -1,0 +1,36 @@
+global:
+  team: at
+  name: dynamic-assessment
+  type: service
+  service:
+    port: 80
+    adminPort: 81
+  monitoring:
+    endpoint:
+      path: /health
+      port: 80
+      interval: 20s
+
+deployment:
+  image:
+    cmd: dotnet AT.DynamicAssessment.Api.dll
+  replicaCount: 1
+  healthCheck:
+    path: /health
+    port: 80
+    initialDelaySeconds: 3
+
+virtualservice:
+  gateway:
+    enabled: true
+    httpRoutes:
+      - uri:
+          prefix: /api/
+      - uri:
+          exact: /api
+    rewrite:
+      uri: /
+    headers:
+      request:
+        set:
+          x-forwarded-prefix: /api

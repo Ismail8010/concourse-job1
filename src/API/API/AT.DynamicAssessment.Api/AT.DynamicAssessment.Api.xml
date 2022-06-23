@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AT.DynamicAssessment.Api</name>
+    </assembly>
+    <members>
+        <member name="M:AT.DynamicAssessment.Api.Controllers.AssessmentController.GetAssessmentItems(AT.DynamicAssessment.Application.Features.Assessment.Commands.GetAssessmentItems.GetAssessmentItemsCommand)">
+            //<summary>
+            This API use for Get Assessment Items
+            </summary>
+            <response code="200">request ok</response>
+            <response code="400">Invalid json provided to endpoint</response>
+        </member>
+        <member name="M:AT.DynamicAssessment.Api.Controllers.InfoController.#ctor(Microsoft.Extensions.Options.IOptions{AT.DynamicAssessment.Api.Config.Configuration})">
+            <summary>
+            Endpoint to retrieve basic versioning info for this service.
+            </summary>
+        </member>
+        <member name="M:AT.DynamicAssessment.Api.Controllers.InfoController.Info">
+            <summary>
+            Endpoint to retrieve basic versioning info for this service.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
